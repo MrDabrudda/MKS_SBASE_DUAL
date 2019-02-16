@@ -254,7 +254,7 @@
  *
  * :{ 0:'No power switch', 1:'ATX', 2:'X-Box 360' }
  */
-#define POWER_SUPPLY 1
+#define POWER_SUPPLY 0
 
 #if POWER_SUPPLY > 0
   // Enable this option to leave the PSU off at startup.
@@ -529,8 +529,8 @@
 #define USE_XMIN_PLUG
 #define USE_YMIN_PLUG
 #define USE_ZMIN_PLUG
-//#define USE_XMAX_PLUG
-//#define USE_YMAX_PLUG
+#define USE_XMAX_PLUG
+#define USE_YMAX_PLUG
 //#define USE_ZMAX_PLUG
 
 // Enable pullup for all endstops to prevent a floating state
@@ -560,11 +560,11 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+#define X_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define Z_MIN_ENDSTOP_INVERTING true  // set to true to invert the logic of the endstop.
-#define X_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
-#define Y_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+#define X_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
+#define Y_MAX_ENDSTOP_INVERTING true// set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Z_MIN_PROBE_ENDSTOP_INVERTING true  // set to true to invert the logic of the probe.
 
@@ -1199,7 +1199,7 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing when homing all axes (G28).
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-#define Z_SAFE_HOMING
+//#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).

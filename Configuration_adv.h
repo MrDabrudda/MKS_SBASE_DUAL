@@ -312,7 +312,7 @@
 #define X_DUAL_STEPPER_DRIVERS
 #if ENABLED(X_DUAL_STEPPER_DRIVERS)
   #define INVERT_X2_VS_X_DIR true   // Set 'true' if X motors should rotate in opposite directions
-  //#define X_DUAL_ENDSTOPS
+  #define X_DUAL_ENDSTOPS
   #if ENABLED(X_DUAL_ENDSTOPS)
     #define X2_USE_ENDSTOP _XMAX_
     #define X_DUAL_ENDSTOPS_ADJUSTMENT  0
@@ -322,7 +322,7 @@
 #define Y_DUAL_STEPPER_DRIVERS
 #if ENABLED(Y_DUAL_STEPPER_DRIVERS)
   #define INVERT_Y2_VS_Y_DIR true   // Set 'true' if Y motors should rotate in opposite directions
-  //#define Y_DUAL_ENDSTOPS
+  #define Y_DUAL_ENDSTOPS
   #if ENABLED(Y_DUAL_ENDSTOPS)
     #define Y2_USE_ENDSTOP _YMAX_
     #define Y_DUAL_ENDSTOPS_ADJUSTMENT  0
@@ -510,7 +510,7 @@
 //#define MICROSTEP32 HIGH,LOW,HIGH
 
 // Microstep setting (Only functional when stepper driver microstep pins are connected to MCU.
-#define MICROSTEP_MODES { 16, 16, 16, 16, 16, 16 } // [1,2,4,8,16]
+#define MICROSTEP_MODES { 32, 32, 32, 32, 32, 32 } // [1,2,4,8,16]
 
 /**
  *  @section  stepper motor current
@@ -532,7 +532,7 @@
  *    M908 - BQ_ZUM_MEGA_3D, RAMBO, PRINTRBOARD_REVF, RIGIDBOARD_V2 & SCOOVO_X9H
  *    M909, M910 & LCD - only PRINTRBOARD_REVF & RIGIDBOARD_V2
  */
-//#define PWM_MOTOR_CURRENT { 1300, 1300, 1250 }          // Values in milliamps
+#define PWM_MOTOR_CURRENT { 1200, 1200, 1200 }          // Values in milliamps
 //#define DIGIPOT_MOTOR_CURRENT { 135,135,135,135,135 }   // Values 0-255 (RAMBO 135 = ~0.75A, 185 = ~1A)
 //#define DAC_MOTOR_CURRENT_DEFAULT { 70, 80, 90, 80 }    // Default drive percent - X, Y, Z, E axis
 
